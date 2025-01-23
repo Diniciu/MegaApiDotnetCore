@@ -124,7 +124,7 @@ src
 │   ├── 📂 Repositories     [Repository pattern]
 ```
 
-4. Licença:
+4. Perfil:
 
 ⌨ Vinícius Ferreira -
 [GitHub](https://github.com/Diniciu)
