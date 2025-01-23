@@ -1,134 +1,114 @@
-<h1 align="center">
-  <br />
-  <img
-    src="./_docs/assets/icon.png"
-    alt="Mega Man Robots API"
-    width="150"
-  />
-  <br />
-  <b>Mega Man Robots API</b>
-  <br />
-  <sub
-    ><sup><b>(MEGA-MAN-ROBOTS)</b></sup></sub
-  >
-  <br />
-  <a
-    href="https://github.com/felipeAguiarCode/MegaApiDotnetCore/actions/workflows/build.yml"
-  >
-    <img
-      src="https://github.com/felipeAguiarCode/MegaApiDotnetCore/actions/workflows/build.yml/badge.svg"
-      alt=""
-    />
-  </a>
-  <a href="https://github.com/felipeAguiarCode/MegaApiDotnetCore/releases/latest">
-    <img
-      src="https://img.shields.io/github/v/release/felipeAguiarCode/MegaApiDotnetCore"
-      alt="Latest Release"
-    />
-  </a>
-</h1>
-
-<p align="center">
-  This .NET Core API is designed to serve JSON formatted data about bosses from
-  the Mega Man series. It is a backend service built with .NET Core 3.1 and
-  various modern dependencies for data management and API response handling.
-  <br />
-</p>
-
-<p align="center">
-  Developed with Entity Framework Core and other modern .NET technologies, this
-  project aims to provide a robust API for accessing Mega Man robot data.
-  <br />
-</p>
-
-<p align="center">
-  <br />
-  <img src="./_docs/assets/carbon.png" />
-</p>
-
-## API Endpoints
-
 <table align="center">
-  <tr>
-    <th>Method</th>
-    <th>Endpoint</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>GET</td>
-    <td>/api/v1/robots</td>
-    <td>Returns a list of all robots</td>
-  </tr>
-  <tr>
-    <td>GET</td>
-    <td>/api/v1/robots/{id}</td>
-    <td>Returns details of a specific robot by ID</td>
-  </tr>
-  <tr>
-    <td>POST</td>
-    <td>/api/v1/robots</td>
-    <td>Endpoint to create a new robot entry</td>
-  </tr>
+    <tr>
+        <td align="center" width="25%">
+            <img src="https://vignette.wikia.nocookie.net/megaman/images/2/22/Cutman.png" alt="MegaMan Bosses API" >
+        </td>
+        <td align="center" width="75%">
+          
+# MegaMan Bosses API
+          
+[![Release workflow](./_docs/assets/icon.png)](https://github.com/Diniciu/MegaApiDotnetCore/actions/workflows/release.yml)
+  <br>
+        </td>
+    </tr>
 </table>
 
-## Techniques Used
-
 <p align="center">
-  - <b>Entity Framework Core:</b> ORM for data management.<br />
-  - <b>RESTful API Design:</b> Ensures clear and effective communication
-  endpoints.<br />
-  - <b>Dependency Injection:</b> Used throughout to promote loose coupling and
-  enhanced testability.<br />
+  Este projeto é uma API feita em .NET Core 3.1 que lista dados dos bosses de MegaMan. O objetivo principal é fornecer dados em formato JSON sobre os bosses do jogo.
+  <br />
 </p>
 
-## Dependencies
+## Estrutura do JSON
 
-<table align="center">
-  <tr>
-    <th>Package</th>
-    <th>Version</th>
-    <th>Link</th>
-  </tr>
-  <tr>
-    <td>Microsoft.EntityFrameworkCore</td>
-    <td>3.1.8</td>
-    <td>
-      <a
-        href="https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/3.1.8"
-        >NuGet</a
-      >
-    </td>
-  </tr>
-  <tr>
-    <td>Microsoft.EntityFrameworkCore.Design</td>
-    <td>3.1.8</td>
-    <td>
-      <a
-        href="https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/3.1.8"
-        >NuGet</a
-      >
-    </td>
-  </tr>
-  <tr>
-    <td>Microsoft.EntityFrameworkCore.SqlServer</td>
-    <td>3.1.8</td>
-    <td>
-      <a
-        href="https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/3.1.8"
-        >NuGet</a
-      >
-    </td>
-  </tr>
-  <tr>
-    <td>Newtonsoft.Json</td>
-    <td>12.0.2</td>
-    <td>
-      <a href="https://www.nuget.org/packages/Newtonsoft.Json/12.0.2">NuGet</a>
-    </td>
-  </tr>
-</table>
+A API fornece dados no seguinte formato:
 
-## :gear: Arch
+```json
+{
+  "Id": 1,
+  "Code": "DLN/DRN-003",
+  "Name": "Cutman",
+  "HP": 150,
+  "Picture": "./_docs/assets/carbon.png"
+}
+```
+
+## Endpoints
+
+| Método | Rota | Descrição |
+| --- | --- | --- |
+| GET | `/api/v1/robots` | Retorna a lista de todos os bosses. |
+| GET | `/api/v1/robots/{id}` | Retorna os dados de um boss específico pelo ID. |
+| POST | `/api/v1/robots` | Cria um novo boss. |
+
+## Dependências do Projeto
+
+| Dependência | Descrição |
+| --- | --- |
+| [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/3.1.8) | Provedor de acesso a dados para .NET |
+| [Microsoft.EntityFrameworkCore.Design](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/3.1.8) | Ferramentas de design do Entity Framework Core |
+| [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/3.1.8) | Provedor SQL Server para Entity Framework Core |
+| [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/12.0.2) | Biblioteca para trabalhar com JSON no .NET |
+
+## Estrutura do Projeto
+
+- .vs/
+- .vscode/
+- bin/
+- Controllers/
+- Database/
+- middlewares/
+- Models/
+- obj/
+- Properties/
+- Services/
+- appsettings.Development.json
+- appsettings.json  
+- global.json
+- MegamanApi.csproj  
+- MegamanApi.sln
+- Program.cs
+- Startup.cs
+
+## Técnicas Utilizadas
+
+Este projeto utiliza as seguintes técnicas:
+
+- **Programação Orientada a Objetos (POO)**: Para estruturação e organização do código.
+- **Injeção de Dependência**: Para gerenciar as dependências e promover um código desacoplado.
+- **API RESTful**: Para criação dos endpoints e manipulação dos dados.
+- **Entity Framework Core**: Para mapeamento objeto-relacional (ORM) e acesso ao banco de dados.
+
+## Tecnologias Utilizadas
+
+Este projeto utiliza as seguintes tecnologias:
+
+- .NET Core 3.1
+- Entity Framework Core
+- SQL Server
+- Newtonsoft.Json
+
+## Como Executar o Projeto
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/Diniciu/MegaApiDotnetCore.git
+cd megaman-bosses-api
+```
+
+2. Restaure as dependências:
+
+```bash
+dotnet restore
+```
+
+3. Execute o projeto:
+
+```bash
+dotnet run
+```
+
+## Arquitetura
 
 ```🌐
 src
@@ -144,7 +124,7 @@ src
 │   ├── 📂 Repositories     [Repository pattern]
 ```
 
-## License This software is licensed under the terms of the [MIT]
+4. Licença:
 
-⌨️ FelipeAguiar -
-[Github](https://github.com/felipeAguiarCode)
+⌨ Vinícius Ferreira -
+[GitHub](https://github.com/Diniciu)

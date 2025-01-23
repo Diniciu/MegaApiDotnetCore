@@ -1,5 +1,5 @@
-contexto:
-Este projeto é um projeto de uma api feito em dotnet, para listar os dados dos bosses de megaman, o objetivo principal é ser um backend que fornece jsons no formato abaixo:
+Contexto:
+Projeto de API feito em .NET, listando dados dos bosses de MegaMan; o objetivo principal é ser um backend que fornece jsons no formato abaixo:
 
 ```
 {
@@ -11,7 +11,7 @@ Este projeto é um projeto de uma api feito em dotnet, para listar os dados dos 
 }
 ```
 
-Especificações do projeto:
+Especificações:
 
 ```
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -33,7 +33,7 @@ Especificações do projeto:
 </Project>
 ```
 
-os endpoints do projeto são:
+Os endpoints do projeto são:
 namespace Megaman.Controllers
 
 ```
@@ -85,10 +85,9 @@ namespace Megaman.Controllers
 
 REGRAS:
 
-- Sempre que citar alguma dependência do projeto, deixe ela como hyperlink para a página oficial daquela dependência
-- Organize as dependências em uma sessão em formato de tabela
-
-- crie uma estrutura do projeto com base na arvore de pastas abaixo, e crie uma sessão para explicitar as técnicas utilizadas
+- Sempre que citar alguma dependência do projeto, deixe ela como hyperlink para a página oficial daquela dependência.
+- Organize as dependências em uma sessão em formato de tabela.
+- Crie uma estrutura do projeto com base na arvore de pastas abaixo, e crie uma sessão para explicitar as técnicas utilizadas:
 
 .vs
 .vscode
